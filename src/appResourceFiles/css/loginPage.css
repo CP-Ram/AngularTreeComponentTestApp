@@ -1,0 +1,396 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../css/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../css/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("../css/Roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../css/Roboto/Roboto-Light.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  text-align: center !important;
+  position: absolute !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  right: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: url("../images/LoginPages/Login_Screen_Main_Background.svg") no-repeat center center fixed !important;
+  background-size: cover !important;
+}
+
+.box {
+  width: 500px;
+  height: 500px;
+  border-radius: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.logo-img {
+  background: url("../images/VisurTechLogo.svg") no-repeat center center;
+  margin-top: 105px;
+  width: 313.42px;
+  height: 66.167px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inner-box {
+  position: absolute;
+  width: 350px;
+  margin: 2px 74px;
+}
+
+.textboxStyle {
+  font-family: Roboto Light !important;
+  font-style: normal !important;
+  border: none !important;
+  padding: 8px 0px 8px 0px !important;
+  color: white !important;
+  margin: 44px 0px 0px 0px !important;
+  text-align: center !important;
+  align-content: center !important;
+  border-bottom: 0.07vw solid #757575 !important;
+  width: 300px !important;
+  font-size: 16px !important;
+  background: none !important;
+  outline: 0;
+}
+
+.textboxStyle-switch {
+  font-family: Roboto Light !important;
+  font-style: normal !important;
+  border: none !important;
+  padding: 8px 0px 8px 0px !important;
+  color: white !important;
+  margin: 44px 0px 0px 0px !important;
+  text-align: center !important;
+  align-content: center !important;
+  border-bottom: 0.07vw solid transparent !important;
+  width: max-content;
+  font-size: 16px !important;
+  background: none !important;
+  outline: 0;
+}
+
+.textboxStyle-switch-user {
+  font-family: Roboto Light !important;
+  font-style: normal !important;
+  border: none !important;
+  padding: 8px 0px 8px 0px !important;
+  color: white !important;
+  margin: 44px 0px 0px -125px !important;
+  text-align: center !important;
+  align-content: center !important;
+  border-bottom: 0.07vw solid transparent !important;
+  width: max-content;
+  font-size: 16px !important;
+  background: none !important;
+  outline: 0;
+}
+
+.textboxStyle_cp {
+  margin: 16px 0px 0px 0px !important;
+}
+
+.rectangle {
+  cursor: pointer;
+  width: 100px !important;
+  height: 36px !important;
+  background: transparent !important;
+  border: 0.5px solid !important;
+  border-radius: 2px !important;
+  color: white !important;
+  font-size: 20px !important;
+  font-family: Roboto Regular !important;
+  margin: 16px 0px 22px 0px;
+  outline: none;
+}
+
+/* input:disabled,
+input[disabled] {
+  background-color: #ccc;
+} */
+
+input:disabled,
+input[disabled]:hover {
+  /* background-color: #ccc !important; */
+  background: transparent;
+  cursor: not-allowed;
+}
+
+.rectangle:hover,
+.rectangle:focus,
+.rectangle:active {
+  background-color: #3b586f !important;
+  color: white !important;
+  opacity: 1.5;
+  outline: none;
+}
+
+.rectangle:disabled,
+.rectangle:disabled:hover,
+.rectangle:disabled:focus,
+.rectangle:disabled:active {
+  background-color: unset !important;
+  opacity: 0.4;
+  outline: none;
+}
+
+.rectangle-switch {
+  width: max-content !important;
+  height: 32px !important;
+  font-size: 17px !important;
+  letter-spacing: 2px;
+  padding: 0px 24px 0px 24px;
+  outline: none;
+}
+
+.passwordValidation-message {
+  font-size: 12px;
+  color: #39b54a;
+  font-family: Roboto light;
+  position: fixed;
+  left: -15px;
+  width: 112%;
+  text-align: center;
+  font-weight: 100;
+  white-space: pre-line;
+}
+
+svg.LiveChatSupport {
+  position: absolute;
+  top: 92%;
+  right: 2%;
+  width: 15px;
+  height: 18.17px;
+  fill: #ffffff;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+svg.LiveChatSupport:hover {
+  opacity: 1;
+}
+
+.linkText {
+  font-family: Roboto Light;
+  font-style: normal;
+  border: none;
+  padding: 50px 1px 1px 1px;
+  color: white;
+  display: block;
+  text-align: center;
+  align-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.linkButton {
+  font-family: Roboto Light;
+  font-style: normal;
+  border: none;
+  color: #46a0f5 !important;
+  text-align: center;
+  align-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+}
+
+.linkButton:hover,
+.linkButton:focus,
+.linkButton:active {
+  outline: none;
+}
+
+.linkPadding {
+  padding: 22px 1px 1px 1px;
+}
+
+.displayNone {
+  display: none;
+}
+
+/* Popover styling */
+img.hint {
+  position: relative;
+  top: -100px;
+  display: block;
+  float: right;
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.popover_content {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #7d7d7d;
+  text-align: left;
+  padding: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.popover_wrapper:hover .popover_content {
+  z-index: 10;
+  visibility: visible;
+  transform: translate(340px, -90px);
+  opacity: 0.85;
+  color: white;
+  font-family: Roboto Light;
+  font-size: 14px;
+}
+
+img#showHidePassword {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: block;
+  float: right;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.support {
+  opacity: 1 !important;
+  color: #8fc6f0 !important;
+  text-decoration: none !important;
+}
+
+.error-message {
+  font-size: 16px !important;
+  color: #fb8039 !important;
+  font-family: Roboto light !important;
+  position: relative !important;
+  left: 0px !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-weight: 100 !important;
+  margin: 0px !important;
+  white-space: pre-line !important;
+}
+
+.error-message-ip {
+  /* position: absolute; */
+  position: relative !important;
+  left: -160px !important;
+  width: 190% !important;
+  height: 38.4px !important;
+}
+
+.message-hint {
+  position: relative !important;
+  left: 0px !important;
+}
+
+.correct-message {
+  font-size: 15px !important;
+  color: #39b54a !important;
+  font-family: Roboto light !important;
+  position: relative !important;
+  left: 0px !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-weight: 100 !important;
+  margin: 0px !important;
+}
+
+.correct-message-switch {
+  font-size: 15px !important;
+  color: #39b54a !important;
+  font-family: Roboto light !important;
+  position: relative !important;
+  left: 40px !important;
+  text-align: center !important;
+  font-weight: 100 !important;
+}
+
+.blinking-text {
+  font-size: 15px;
+  color: #46a0f5;
+  text-align: center;
+  font-family: Roboto Light;
+  animation: blinker 1.5s linear infinite;
+  margin-top: 22px;
+}
+.session-out{
+  color: #cc5500;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking-text-top {
+  margin-top: 35px !important;
+}
+
+.blinking-text-switch {
+  width: max-content;
+  margin-left: 15px;
+  color: #39b54a !important;
+}
+
+button#continue1 {
+  margin-right: 10px;
+}
+
+.overrideInputBtnText {
+  padding: 1px 6px !important;
+  -webkit-appearance: push-button !important;
+  user-select: none !important;
+  white-space: pre !important;
+  align-items: flex-start !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  text-transform: none !important;
+  text-indent: 0px !important;
+  text-shadow: none !important;
+  display: inline-block !important;
+  -webkit-rtl-ordering: logical !important;
+}
+
+.showButton{
+    background-color:none;
+
+}
+.fa{
+      width:17px !important;
+      height:15px !important;
+      color: white !important;
+}
+  .hide-password {
+  display: none;
+}

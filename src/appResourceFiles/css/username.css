@@ -1,0 +1,54 @@
+﻿ body {
+            padding: 0;
+            margin: 0;
+            /*height: 650px;*/
+            background-color: #23437C;
+            height:0% !important;
+
+        }
+
+.helper {
+    font-family: Times New Roman;
+    font-style: normal;
+    /*height: 650px;*/
+    margin: 0px;
+    padding: 0px;
+    background-image: url('../images/Companynamebg.svg');
+}
+
+        .formCss {
+            align-items: center;
+            align-content: center;
+            background-color: blue;
+            margin-left: 30%;
+            margin-top: 20%;
+        }
+
+.textboxStyle {
+    margin-bottom: -2vw;
+    font-family: Roboto;
+    font-style: normal;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 6px;
+    color: black;
+    height: 3vw;
+    width: 18vw;
+    font-size: 1.4vw;
+    text-align: center;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.10));
+    background-color:white;
+}
+
+.rectangle {
+    margin-top:3vw;
+    width: 15vw;
+    height: 3.2vw;
+    background: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+    color: #d9d9d9;
+    font-size: 1.3vw;
+    background-image: url('../images/loginimages/green_button_next.svg');
+}
+
+      

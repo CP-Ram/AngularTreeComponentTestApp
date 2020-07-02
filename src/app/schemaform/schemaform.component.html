@@ -1,0 +1,11 @@
+
+<!-- <div *ngFor="let item of formsBackendRecievedSampleList"> -->
+    <div *ngIf="initialze" [formGroup]="myForm" >
+        <div formArrayName="lists" *ngFor="let a of myForm.get('lists')['controls']; let i = index">
+        <div [formGroupName]="i" style="margin-bottom: 10px;">
+          <label for="name">Name:</label>
+          <input type="text" name="name" formControlName="name">
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->

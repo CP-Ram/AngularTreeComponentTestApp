@@ -1,0 +1,28 @@
+body {
+  height: 0% !important;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+}
+
+#myBar {
+  background-color: #378ccb;
+  width: 2px;
+  height: 4px;
+  float: left;
+  display: -webkit-inline-box;
+}
+
+div#progressCont {
+  background-color: #282828;
+  width: 252px;
+  height: 4px;
+  float: left;
+  margin: 290px 10px 0px 126px;
+}
+
+div#myProgressName {
+  color: white;
+  font-size: 15px;
+  margin: 307px 10px 290px 10px;
+  font-family: Roboto !important;
+}

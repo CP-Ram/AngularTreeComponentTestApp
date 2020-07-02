@@ -1,0 +1,51 @@
+<!-- <router-outlet></router-outlet> -->
+<p>
+  Angular tree Component example:<button (click)="ActiveNode()">ActivateNode</button>
+</p>
+<hr>
+<br>
+<div class="layout-container">
+  <!-- <div class="side-header">left</div> -->
+  <!-- <div class="side-tree  border-r" > -->
+    <div class="inner-container">
+      <div id="tree-areas">
+        <div *ngIf="false;else other_content">
+        </div>
+        <ng-template #other_content>
+          <app-angular-hierarchy-tree [HierarchyTreeName]="'MyTestingTree'"></app-angular-hierarchy-tree>
+        </ng-template>
+      </div>
+    </div>
+    <div class="middle-container" style="position: absolute;
+    /* display: inline-block; */
+    right: 42px;
+    top: 107px;
+    background: #e7d9d9;">
+      <app-schemaform></app-schemaform>
+    </div>
+  <!-- </div> -->
+  <!-- <div class="fabric-area" >
+   middle
+  </div>
+  <div class="side-tree box-shadow">
+    right
+  </div>
+  <div class="side-header">
+    right header
+  </div> -->
+
+
+
+  
+  <!-- <div id="divtwo" style="width: 30%;">
+    <div id="tree-areas" style="background: teal; ">
+      <div *ngIf="false;else other_content">
+      </div>
+      <ng-template #other_content>
+        <app-angular-hierarchy-tree [HierarchyTreeName]="'MyTestingTree'"></app-angular-hierarchy-tree>
+      </ng-template>
+    </div>
+  </div>
+  <div id="divthree" style="width: 70%;background-color:blue;"></div>
+  <div id="divtwo" style="width: 42%;background-color:red;"></div> -->
+</div>

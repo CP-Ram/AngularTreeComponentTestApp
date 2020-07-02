@@ -1,0 +1,40 @@
+#tree-areas {
+    position: absolute;
+    top: 42px;
+    width: 30%;
+    padding-right:5px;  
+    height: calc(100% - 48px);
+    // overflow: auto;
+    // overflow-x: hidden;
+    box-sizing: border-box;
+    background: gray;
+  }
+
+  .layout-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 42px;
+  }
+  .side-header{
+    background-color: green;
+    overflow: hidden;
+    z-index: 6;
+  }
+  .side-tree{
+    background-color: black;
+    overflow: hidden;
+    resize: none;
+    z-index: 7;
+  }
+  .border-r {
+    border-right: 0.5px solid #000000;
+  }
+
+  .inner-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EnergyApp</title>
+    <link href="~/css/v2rhome.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Roboto:400,300,700,500,100' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ol3/4.3.4/ol.js"></script>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.3.4/css/ol.css" type="text/css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="~/css/app.css" rel="stylesheet" />
+    <link href="~/css/d3-context-menu.css" rel="stylesheet" />
+    <link href="~/css/MxClient/common.css" rel="stylesheet" />
+    <script src="~/js/MxClient/mxClient.js"></script>
+    <script src="~/js/XmlToJson/xmltojson.js"></script>
+    <script src="~/js/pdfjs/pdf.js"></script>
+    <script src="~/js/pdfjs/pdf.worker.js"></script>
+    <link href="~/css/ng2datepicker/style/picker.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+
+    <!--color picker of spectrum-->
+    <script src="~/js/color-picker/spectrum.js" type="text/javascript"></script>
+    <link href="~/css/color-picker/spectrum.css" rel="stylesheet" type="text/css" />
+
+    <!-- google start-->
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://mapgears.github.io/ol3-google-maps/examples/dist/examples/resources/ol.css" type="text/css" />
+        <link rel="stylesheet" href="http://mapgears.github.io/ol3-google-maps/examples/dist/examples/resources/ol3gm.css" type="text/css" />*@
+
+    <!-- google end-->
+    <!-- ol3-context-->
+    <link href="~/css/bpmn-embedded.css" rel="stylesheet" />
+
+    <link href="~/css/bpmn.css" rel="stylesheet" />
+    <link href="~/css/diagram-js.css" rel="stylesheet" />
+    <link rel="stylesheet/less" type="text/css" href="~/styles/properties.less" />
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">*@
+
+    <link rel="author" href="https://github.com/valor-software/ng2-select/graphs/contributors">
+    <link rel="stylesheet" href="https://unpkg.com/ol-popup@2.0.0/src/ol-popup.css">
+    <script src="https://unpkg.com/ol-popup@2.0.0"></script>
+    <link href="https://unpkg.com/ol-geocoder/dist/ol-geocoder.min.css" rel="stylesheet">
+    <!--<script src="https://unpkg.com/ol-geocoder"></script>-->
+    <script src="~/js/ol-geocoder-debug.js"></script>
+    <link href="~/css/ol.css" rel="stylesheet" />
+    <script src="~/js/ol3-contextmenu.js"></script>
+    <link href="~/css/ol3-contextmenu.css" rel="stylesheet" />
+
+    <!-- Assets Export Data-->
+    <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.js"></script>
+    <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+    <script src="~/js/FileSaver.js"></script>
+
+    <!--jscolor-->
+    <script src="~/js/jscolor.js"></script>
+
+    <!--locatemap-->
+    @*<link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">*@
+
+
+    <!--progress bar for assets-->
+    <!-- <script src="~/js/nprogressbar.js"></script>
+    <link href="~/css/nprogressbar.css" rel="stylesheet" /> -->
+
+    <!-- scrollbar-->
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
+    <script>
+        function move() {
+            var elem = document.getElementById("myBar");
+          var width = 1;
+            var id = setInterval(frame, 1);
+            width = 5;
+            elem.style.width = width + '%';
+            elem.innerHTML = "Loading in progress... " + width * 1 + '%';
+
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = "Loading in progress... " + width * 1 + '%';
+                }
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+<body onload="move()">
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+    <app></app>
+    <script type="text/javascript" src="/polyfills.bundle.js">
+    </script>
+    <script type="text/javascript" src="/vendor.bundle.js">
+    </script>
+    <script type="text/javascript" src="/app.bundle.js"></script>
+
+    <!-- google start-->
+    @*<script type="text/javascript"
+                src="https://maps.googleapis.com/maps/api/js?v=3&key=
+        AIzaSyAnb9BpmuuH_KsK_aYBgkKvmkCkwWsJBtQ"></script>
+
+        <script src="http://mapgears.github.io/ol3-google-maps/examples/dist/ol3gm.js"></script>*@
+    <!--google end-->
+
+
+<script type="text/javascript" src="/polyfills.bundle.js"></script><script type="text/javascript" src="/vendor.bundle.js"></script><script type="text/javascript" src="/app.bundle.js"></script></body>
+</html>

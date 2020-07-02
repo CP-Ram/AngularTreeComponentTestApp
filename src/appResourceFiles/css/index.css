@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../css/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  src: url("../css/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Thin";
+  src: url("../css/Roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../css/Roboto/Roboto-Light.ttf");
+}
+
+.group {
+  position: relative;
+  margin-bottom: 1vw;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.helper {
+  font-family: Times New Roman;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../images/LoginPages/VISUR-World-Map-Wallpaper.png");
+}
+
+.formCss {
+  align-items: center;
+  align-content: center;
+  background-color: blue;
+  margin-left: 30%;
+  margin-top: 20%;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.modal-backdrop {
+  z-index: 0 !important;
+}
+
+.popover_content {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #7d7d7d;
+  text-align: left;
+  padding: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.details-text {
+  margin: 15px 0px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-size: 18px;
+  font-family: Roboto Thin;
+  font-weight: 200;
+}
+
+.content-box {
+  position: absolute;
+  width: 24vw;
+  height: 15vw;
+  left: 38vw;
+}
+
+.btn-rect {
+  width: 100%;
+  height: 2vw;
+  background-color: #318fd7;
+  font-size: 2vw;
+}
+
+.text {
+  pointer-events: none;
+}
+
+.logo-support {
+  border-radius: 1.5em;
+  position: absolute;
+  top: 92%;
+  right: 1%;
+}
+
+.support_btn {
+  width: 30px;
+  height: 36.333px;
+}
+
+.background-img {
+  position: absolute;
+  text-align: center;
+  left: 0vw;
+  top: 0vw;
+  margin: 0vw;
+  padding: 0vw;
+  width: 100%;
+}
+
+.addPaddingIn404 {
+  padding: 22px 0px 8px 0px;
+}
+
+.addPaddingIn405 {
+  padding: 70px 0px 0px 0px;
+}
+
+.progressCont {
+  background-color: #1a1a1a;
+  width: 300px;
+  height: 6px;
+  float: left;
+  margin: 45px 0px 0px 106px;
+  color: white;
+  font-size: 16px;
+  font-family: Roboto Light;
+  cursor: context-menu;
+}
+
+#myBar {
+  background-color: #3a8ccb;
+  width: 2px;
+  height: 6px;
+  float: left;
+  display: -webkit-inline-box;
+}
+
+#name {
+  font-family: roboto regular;
+}

@@ -1,0 +1,459 @@
+
+@import '~@angular/material/theming';
+@import '../app/components/globals/components/ng-select/default.theme.scss';
+@import '../app/components/globals/theme.scss';
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import './../app/components/fabrics/activity-center/components/communication/chatbox/mention/quill-mention.scss';
+@import './../app/components/fabrics/activity-center/components/communication/chatbox/mention/quill-snow.scss';
+@import "~ng-pick-datetime/assets/style/picker.min.css";
+.dropFile {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+
+.ui-widget-content {
+  background: none !important;
+}
+
+.tooltip-container{
+  color: black
+}
+
+.selectPanel {
+  margin-top: 2px !important;
+  margin-bottom: 2px !important;
+}
+
+.selectPanelforScale {
+  margin-top: 20px !important;
+}
+.matSelectPanelSize {
+  margin-top: 10px !important;
+}
+
+
+.dark-theme {
+  $dark-primary: mat-palette($mat-gray, 900);
+  $dark-accent: mat-palette($mat-gray,900, A100, A700);
+  $dark-warn: mat-palette($mat-red);
+  $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+}
+
+
+
+
+.cdk-global-scrollblock
+{
+  overflow-y: hidden !important;
+}
+
+
+
+// angular tree css
+
+/* You can add global styles to this file, and also import other style files */
+.tree-children.tree-children-no-padding { padding-left: 0 }
+.tree-children { padding-left: 20px; overflow: hidden }
+.node-drop-slot { display: block; height: inherit }
+.node-drop-slot.is-dragging-over { background: #ddffee; height: 20px; border: 2px dotted #888; }
+.toggle-children-wrapper-expanded .toggle-children { transform: rotate(90deg) }
+.toggle-children-wrapper-collapsed .toggle-children { transform: rotate(0); }
+.toggle-children-wrapper {
+  padding: 2px 3px 5px 1px;
+}
+/* tslint:disable */
+.toggle-children {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ1dWlkOjY1RTYzOTA2ODZDRjExREJBNkUyRDg4N0NFQUNCNDA3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYzRkRFQjcxODUzNTExRTU4RTQwRkQwODFEOUZEMEE3IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYzRkRFQjcwODUzNTExRTU4RTQwRkQwODFEOUZEMEE3IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTk5NzA1OGEtZDI3OC00NDZkLWE4ODgtNGM4MGQ4YWI1NzNmIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YzRkZmQxMGMtY2NlNS0xMTc4LWE5OGQtY2NkZmM5ODk5YWYwIi8+IDxkYzp0aXRsZT4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+Z2x5cGhpY29uczwvcmRmOmxpPiA8L3JkZjpBbHQ+IDwvZGM6dGl0bGU+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+5iogFwAAAGhJREFUeNpiYGBgKABigf///zOQg0EARH4A4gZyDIIZ8B/JoAJKDIDhB0CcQIkBRBtEyABkgxwoMQCGD6AbRKoBGAYxQgXIBRuZGKgAKPIC3QLxArnRSHZCIjspk52ZKMrOFBUoAAEGAKnq593MQAZtAAAAAElFTkSuQmCC');
+  height: 8px;
+  width: 9px;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+  top: -.65px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.toggle-children-placeholder {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  position: relative;
+  top: 1px;
+  padding-right: 3px;
+}
+.node-content-wrapper {
+  display: inline-flex;
+  padding: 2px 5px;
+  border-radius: 2px;
+  transition: background-color .15s,box-shadow .15s;
+}
+.node-wrapper {display: flex; align-items: flex-start;}
+.node-content-wrapper-active,
+/* .node-content-wrapper.node-content-wrapper-active:hover,
+.node-content-wrapper-active.node-content-wrapper-focused {
+  background: #beebff;
+} */
+.node-content-wrapper-focused { background: #e7f4f9 }
+/* .node-content-wrapper:hover { background: #f7fbff } */
+/* .node-content-wrapper-active, .node-content-wrapper-focused, .node-content-wrapper:hover {
+  box-shadow: inset 0 0 1px #999;
+} */
+.node-content-wrapper.is-dragging-over { background: #ddffee; box-shadow: inset 0 0 1px #999; }
+.node-content-wrapper.is-dragging-over-disabled { opacity: 0.5 }
+
+tree-viewport {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  width: 100%;
+  //overflow: auto;
+  overflow: hidden;
+  display: block;
+  min-width: 170px;
+}
+
+tree-viewport {
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.tree-children { padding-left: 20px }
+.empty-tree-drop-slot .node-drop-slot { height: 20px; min-width: 100px }
+
+.angular-tree-component {
+  width:100%;
+  box-sizing: border-box;
+  position:relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 20px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently not supported by any browser */
+}
+
+tree-root .angular-tree-component-rtl {
+  direction: rtl;
+}
+tree-root .angular-tree-component-rtl .toggle-children-wrapper-collapsed .toggle-children {
+  transform: rotate(180deg) !important;
+}
+tree-root .angular-tree-component-rtl .tree-children {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+tree-node-checkbox {
+  padding: 1px;
+}
+
+
+body {
+  font-family: Roboto;
+  margin: 0;
+  position: relative;
+}
+
+#layout-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 0;
+  margin: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+
+
+.ng-dropdown-panel{
+  background-color: var(--mainHeader-BackGroundColor) !important;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked{
+  background-color: var(--select-option) !important;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  border: none !important;
+}
+
+.ng-option:hover{
+  background-color: var(--mouseHover-BackGroundColor) !important
+}
+
+.ng-placeholder {
+  font-size: $formValue-FontSize;
+}
+
+.ng-select .ng-select-container {
+  height: 22px !important;
+  color: var(--form-value-Color) !important;
+  font-size: $formValue-FontSize;
+  background-color: transparent;
+  padding: 0px;
+}
+
+.ng-select.calculateTextColor {
+  color: #39B54A !important;
+	.ng-arrow-wrapper {
+		display: none;
+	}
+}
+
+.ng-select.calculateTextColor .ng-select-container  {            
+  color: #39B54A !important;
+}
+
+ng-select.ng-select-single .ng-select-container {
+  min-height: 10px !important;
+  border: none !important;
+  background-color: transparent !important;
+  height: 20px !important;
+  color: var(--form-value-Color);
+  }
+
+.ng-select .ng-select-container .ng-value-container .ng-input>input {
+  width: calc(100% - 22px) !important;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input{
+  padding:0px;
+  top: 0px;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value{
+  background-color: transparent;
+  border: 1px solid;
+}
+
+.ng-select .ng-select-container:hover {
+  box-shadow: none !important;
+}
+
+.ng-input:focus {
+  outline: none !important;
+}
+
+.ng-value-container:focus{
+  outline: none !important;
+}
+
+.ng-dropdown-panel {
+  border: none !important;
+  width: 120px !important;
+}
+
+
+ng-select.ng-select-multiple .ng-select-container {
+  min-height: 10px !important;
+  border: none !important;
+  background-color: transparent !important;
+  height: 20px !important;
+  color: var(--form-value-Color);
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-input {
+  padding: 0px;
+  top: 0px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  height: 22px !important;
+  color: var(--form-value-Color) !important;
+  font-size: $formValue-FontSize;
+  background-color: transparent;
+  padding: 4px 10px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected, .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked{
+  background-color : var(--mouseHover-BackGroundColor) !important;
+}
+
+
+.ng-dropdown-panel .scroll-host::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+.ng-dropdown-panel .scroll-host::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}
+
+.ng-dropdown-panel .scroll-host::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  background: var(--scroll-BackGround);
+}
+
+
+.ng-value-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+.ng-value-container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}
+
+.ng-value-container::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  background: var(--scroll-BackGround);
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon:hover{
+  background-color: var(--mouseHover-BackGroundColor);
+}
+
+
+.ng-value {
+  font-size: $formValue-FontSize;
+  font-family: roboto !important;
+}
+
+.ng-value-container {
+  padding: 0px !important;
+  height: 20px;
+  overflow: auto;
+}
+
+.ng-select .ng-clear-wrapper {
+  display: none;
+}
+
+.ng-select.ng-select-multiple.ng-select-disabled>.ng-select-container .ng-value-container .ng-value {
+  background-color:  #424242 !important;
+  border: 1px solid #e6e6e6;
+}
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  margin-bottom: 0px !important;
+  margin-right: 0px !important;
+}
+
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+  background-color: var(--mouseHover-BackGroundColor) !important;
+}
+
+/* Bug #35822: <V3 UI>The Size of the drop-down for capability field is large in size. (Asset Management) 
+
+  Open issue in GitHub
+  https://github.com/angular/material2/issues/14515
+  https://stackoverflow.com/questions/53092399/mat-select-panel-min-width
+
+  Remove this code, if it affects any functionality. */
+  // Bug #35822: Code start point.
+  .matSelectPanelSize {
+    position: relative;
+    bottom: 0px;
+    //left: 24px;
+    min-width: 100% !important;
+}
+// .mat-select-panel.ng-animating {
+//   display: none;
+// }
+.mat-select-panel {
+  border-radius: 0px !important;
+}
+.mat-select-panel::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+.mat-select-panel::-webkit-scrollbar-track {
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}
+
+.mat-select-panel::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  background: var(--scroll-BackGround);
+}
+
+
+.ng-dropdown-panel.ng-select-bottom {
+   border-radius: 0px !important;
+}
+
+.mat-pseudo-checkbox-checked::after {
+  color: white !important;
+}
+.mat-pseudo-checkbox.mat-pseudo-checkbox-checked{
+   border-color:silver !important;
+ }
+
+.mat-option-text {
+  height: 14px !important;
+}
+
+// Bug #35822: Code endpoint.
+// .mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out {
+//   background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath style='fill:%23FFFFFF;' d='m 7,9 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 l 6,0 c 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 z'/%3E %3C/svg%3E") !important;
+// }
+// .mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-in {
+//   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath style='fill:%23FFFFFF;' d='M 10 6 C 9.446 6 9 6.4459904 9 7 L 9 9 L 7 9 C 6.446 9 6 9.446 6 10 C 6 10.554 6.446 11 7 11 L 9 11 L 9 13 C 9 13.55401 9.446 14 10 14 C 10.554 14 11 13.55401 11 13 L 11 11 L 13 11 C 13.554 11 14 10.554 14 10 C 14 9.446 13.554 9 13 9 L 11 9 L 11 7 C 11 6.4459904 10.554 6 10 6 z'/%3E %3C/svg%3E")
+// }
+// .mapboxgl-ctrl-group > button {
+//   border: solid 0.5px var(--footer-background-value-color);
+// }
+// .mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+//   margin: 0px 10px 25px 0;
+//   float: right;
+//   background-color: var(--footer-background-value-color);
+// }
+
+
+.dialogOpacity {
+  opacity: 0.8 !important;
+}
+
+.mde-popover-content mat-card mat-card-content table tbody {
+  display: block;
+  overflow: auto;
+  max-height: 240px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--sideContainer-BackGroundColor);
+}
+
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+  background: var(--scroll-BackGround);
+  border-radius: 2.5px;
+}
+
+#dialogboxCalenderIconButton { //Bug #52348 [Effective form] When clicking on the calendar button then click outside click is still holding the calendar button in the effective form in location form.
+
+  .mat-button-focus-overlay {
+    background-color: transparent !important;
+  }
+
+  .mat-button-ripple.mat-ripple.mat-button-ripple-round {
+    color: transparent !important;
+  }
+
+}
+
+.ng-select.ng-select-focused.ng-select-edit-focused .ng-value-label {
+  color: transparent;
+}
